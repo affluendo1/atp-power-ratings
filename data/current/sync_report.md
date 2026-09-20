@@ -1,11 +1,11 @@
 # ATP Power Ratings sync report
 
-Checked (UTC): 2026-09-20T06:46:26.163805+00:00
+Checked (UTC): 2026-09-20T07:11:59.298563+00:00
 Coverage: 2023-09-20 to 2026-09-19
 Results indexed: 32,028
 Players: 1,507
 Events: 1,100
-New matches: 32,028
+New matches: 0
 Corrected matches: 0
 Manual men's-special-event matches: 31
 
