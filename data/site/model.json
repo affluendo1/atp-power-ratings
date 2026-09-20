@@ -1,0 +1,11 @@
+{
+  "version": "ATP V1",
+  "centre": 1500.0,
+  "displayScale": 600.0,
+  "gameScale": 0.75,
+  "halfLifeDays": 300.0,
+  "rollingWindowDays": 1096,
+  "evidenceCapGames": 28.0,
+  "minimumMatches": 8,
+  "bestOfFiveRule": "Conventional-set games remain scoreline evidence, while every single match is capped at 28 game-equivalents so a five-set match is not treated as several independent matches. Match tiebreak points are excluded from game totals."
+}

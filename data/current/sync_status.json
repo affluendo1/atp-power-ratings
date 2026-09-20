@@ -1,0 +1,38 @@
+{
+  "checked_at_utc": "2026-09-20T06:44:35.448916+00:00",
+  "new_results": true,
+  "new_matches": 32042,
+  "corrected_matches": 0,
+  "matches": 32042,
+  "players": 1507,
+  "events": 1100,
+  "coverage_start": "2023-09-20",
+  "coverage_end": "2026-09-19",
+  "event_counts": {
+    "ATP Finals": 60,
+    "ATP Tour": 6501,
+    "ATP Tour Qualifying": 2582,
+    "Challenger": 19254,
+    "Davis Cup": 653,
+    "Grand Slam": 2868,
+    "Hopman Cup": 7,
+    "Laver Cup": 42,
+    "United Cup": 75
+  },
+  "source_files": [
+    "2023.csv",
+    "2023_challenger.csv",
+    "2024.csv",
+    "2024_challenger.csv",
+    "2025.csv",
+    "2025_challenger.csv",
+    "2026.csv",
+    "2026_challenger.csv",
+    "atp_quali/2023_atp_quali.csv",
+    "atp_quali/2024_atp_quali.csv",
+    "atp_quali/2025_atp_quali.csv",
+    "atp_quali/2026_atp_quali.csv",
+    "ongoing_tourneys.csv"
+  ],
+  "manual_special_matches": 31
+}
