@@ -3,6 +3,7 @@ import unittest
 import pandas as pd
 
 from model import MATCH_EVIDENCE_CAP_GAMES, fit_power_ratings_from_df, score_to_games
+from generate_site_data import match_win_probability, set_win_probability
 
 
 class ScoreParsingTests(unittest.TestCase):
@@ -24,6 +25,16 @@ class RatingTests(unittest.TestCase):
         self.assertEqual(len(fitted.ratings), 3)
         self.assertGreater(float(fitted.ratings.iloc[0].power), float(fitted.ratings.iloc[-1].power))
         self.assertEqual(MATCH_EVIDENCE_CAP_GAMES, 28.0)
+
+
+class MatchProbabilityTests(unittest.TestCase):
+    def test_even_game_probability_means_even_match_probability(self):
+        self.assertAlmostEqual(set_win_probability(0.5), 0.5, places=9)
+        self.assertAlmostEqual(match_win_probability(0.5, 3), 0.5, places=9)
+        self.assertAlmostEqual(match_win_probability(0.5, 5), 0.5, places=9)
+
+    def test_best_of_five_rewards_the_stronger_player(self):
+        self.assertGreater(match_win_probability(0.60, 5), match_win_probability(0.60, 3))
 
 
 if __name__ == "__main__":

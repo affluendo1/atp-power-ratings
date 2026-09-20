@@ -57,6 +57,18 @@ GitHub Actions cannot safely invent an email account. The workflow is ready to s
 
 Without all three, the sync and site update still run and the workflow explicitly reports that email was skipped. Never put a mail key or email address in this public repository.
 
+## Site analytics
+
+The static site keeps its landing payload compact and loads detailed JSON only when a visitor opens a player or event. Each completed sync publishes:
+
+- **Player Lab** profiles: current Power/uncertainty, surface and event-level records, recent results, best wins, toughest losses, and a clearly-labelled smoothed match-performance trend;
+- **Matchup Lab**: a best-of-three or best-of-five match-probability conversion from the game model, plus head-to-head and surface context. Surface form is deliberately shown separately until it has passed validation as a model adjustment;
+- **Tournament Centre / Knockout Draw**: a standalone event page and round-by-round result reconstruction for every imported event;
+- **Daily Round Centre**: the latest source-date results, featured events, and the exact additions/corrections from the current sync;
+- **Model Health**: internal-fit diagnostics, scoreline error by surface, status counts, source-file traceability and import-quality checks.
+
+The model-health figures are explicitly in-sample diagnostics, not a claim of out-of-sample forecasting performance. A time-split backtest is intentionally the next validation upgrade.
+
 ## Development
 
 ```bash

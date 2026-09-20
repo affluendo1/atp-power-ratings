@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b0d12">
-  <meta name="description" content="Unofficial professional tennis ratings and tournament analytics.">
+  <meta name="description" content="Unofficial ATP-only professional tennis ratings, tournament draws and matchup analytics.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="style.css">
@@ -14,76 +14,103 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="app-shell">
     <header class="topbar">
-      <a class="brand" href="#rankings" aria-label="ATP Power Ratings home">
+      <a class="brand" href="#today" aria-label="ATP Power Ratings home">
         <span class="brand-ball" aria-hidden="true"></span>
         <span><strong>ATP</strong> Power Ratings<small>Professional tennis analytics</small></span>
       </a>
-      <div class="sync-state" title="A live data provider will be connected in the next stage">
-        <span class="status-dot"></span><span>INFRASTRUCTURE MODE</span>
+      <div class="sync-state" title="A GitHub Action checks the ATP-only sources every morning at 7:22am Melbourne time.">
+        <span class="status-dot"></span><span id="sync-label">DAILY SYNC LIVE</span>
       </div>
     </header>
 
     <aside class="sidebar" aria-label="Main navigation">
       <nav class="nav-list">
-        <a class="nav-link active" href="#rankings" data-view="rankings">Rankings</a>
-        <a class="nav-link" href="#tournaments" data-view="tournaments">Tournaments</a>
+        <a class="nav-link active" href="#today" data-view="today">Daily Round Centre</a>
+        <a class="nav-link" href="#rankings" data-view="rankings">Rankings</a>
+        <a class="nav-link" href="#players" data-view="players">Player Lab</a>
+        <a class="nav-link" href="#matchup" data-view="matchup">Matchup Lab</a>
+        <a class="nav-link" href="#tournaments" data-view="tournaments">Tournament Centre</a>
         <a class="nav-link" href="#draw" data-view="draw">Knockout Draw</a>
         <a class="nav-link" href="#results" data-view="results">Match Results</a>
-        <a class="nav-link" href="#players" data-view="players">Player Lab</a>
+        <a class="nav-link" href="#health" data-view="health">Model Health</a>
         <a class="nav-link" href="#methodology" data-view="methodology">Methodology</a>
         <a class="nav-link" href="#settings" data-view="settings">Settings</a>
       </nav>
-      <section class="season-card" aria-label="Season selection">
+      <section class="season-card" aria-label="Data scope">
         <p class="eyebrow">DATA SCOPE</p>
-        <strong>ATP Tour</strong>
-        <span>Singles · knockout events</span>
-        <span class="muted">No results loaded yet</span>
+        <strong>ATP only</strong>
+        <span>Singles · pro & Challenger</span>
+        <span class="muted" id="scope-status">Loading published sync…</span>
       </section>
     </aside>
 
     <main id="main" class="main-content">
-      <section class="view is-visible" id="rankings" data-panel="rankings">
-        <div class="page-heading">
-          <div><p class="eyebrow">GLOBAL SINGLES</p><h1>Power Rankings</h1><p>Opponent-adjusted player strength across professional knockout tournaments.</p></div>
-          <button class="outline-button" disabled title="Available once data is connected">Export ratings</button>
-        </div>
+      <section class="view is-visible" id="today" data-panel="today">
+        <div class="page-heading"><div><p class="eyebrow">DAILY ROUND CENTRE</p><h1>What changed?</h1><p>Fresh results, current tournament activity and the exact state of the ATP-only rating ledger.</p></div></div>
+        <section class="stats-grid" aria-label="Round Centre summary">
+          <article><span>New results, last sync</span><strong data-stat="new-matches">—</strong></article>
+          <article><span>Matches indexed</span><strong data-stat="matches">—</strong></article>
+          <article><span>Events in database</span><strong data-stat="events">—</strong></article>
+          <article><span>Last check</span><strong data-stat="updated">—</strong></article>
+        </section>
+        <div id="round-centre-content" class="stack-gap"><section class="panel loading-panel">Loading the latest published round centre…</section></div>
+      </section>
+
+      <section class="view" id="rankings" data-panel="rankings">
+        <div class="page-heading"><div><p class="eyebrow">GLOBAL SINGLES</p><h1>Power Rankings</h1><p>Opponent-adjusted strength across professional ATP-only singles results.</p></div><button class="outline-button" id="export-ratings">Export ratings</button></div>
         <section class="stats-grid" aria-label="Rating summary">
           <article><span>Players tracked</span><strong data-stat="players">—</strong></article>
           <article><span>Matches indexed</span><strong data-stat="matches">—</strong></article>
           <article><span>Latest event</span><strong data-stat="event">—</strong></article>
-          <article><span>Last update</span><strong data-stat="updated">Not connected</strong></article>
+          <article><span>Window begins</span><strong data-stat="window">—</strong></article>
         </section>
-        <section class="panel ratings-panel"><div class="table-wrap"><table><thead><tr><th>Rank</th><th>Player</th><th>Power</th><th>Record</th><th>Matches</th><th>95% range</th></tr></thead><tbody id="rankings-table"><tr><td colspan="6" class="loading-cell">Importing tour data…</td></tr></tbody></table></div></section>
-      </section>
-
-      <section class="view" id="tournaments" data-panel="tournaments">
-        <div class="page-heading"><div><p class="eyebrow">EVENT INDEX</p><h1>Tournaments</h1><p>Each event is a self-contained knockout draw: Grand Slams, Masters, ATP 500s and ATP 250s.</p></div></div>
-        <section class="panel ratings-panel"><div class="table-wrap"><table><thead><tr><th>Event</th><th>Level</th><th>Surface</th><th>Dates</th><th>Matches</th></tr></thead><tbody id="tournaments-table"><tr><td colspan="5" class="loading-cell">Importing event index…</td></tr></tbody></table></div></section>
-      </section>
-
-      <section class="view" id="draw" data-panel="draw">
-        <div class="page-heading"><div><p class="eyebrow">EVENT BRACKET</p><h1>Knockout Draw</h1><p>Selecting an event will render its rounds from first round through the final.</p></div></div>
-        <section class="panel empty-panel"><div class="empty-icon">⌘</div><h2>No tournament selected</h2><p>The upcoming data layer will feed one draw at a time without forcing a round-robin fixture model onto it. Tiny victory for brackets everywhere.</p></section>
-      </section>
-
-      <section class="view" id="results" data-panel="results">
-        <div class="page-heading"><div><p class="eyebrow">MATCH LEDGER</p><h1>Match Results</h1><p>Completed singles matches will be searchable by event, player, round, surface and season.</p></div></div>
-        <section class="panel ratings-panel"><div class="table-wrap"><table><thead><tr><th>Date</th><th>Event</th><th>Round</th><th>Winner</th><th>Score</th><th>Loser</th></tr></thead><tbody id="results-table"><tr><td colspan="6" class="loading-cell">Importing latest results…</td></tr></tbody></table></div></section>
+        <div class="filter-row"><label>Find a player <input id="ranking-search" type="search" placeholder="e.g. Sinner"></label><label class="check-label"><input id="show-provisional" type="checkbox"> Include provisional</label></div>
+        <section class="panel ratings-panel"><div class="table-wrap"><table><thead><tr><th>Rank</th><th>Player</th><th>Power</th><th>Record</th><th>Matches</th><th>95% range</th></tr></thead><tbody id="rankings-table"><tr><td colspan="6" class="loading-cell">Reading ratings…</td></tr></tbody></table></div></section>
       </section>
 
       <section class="view" id="players" data-panel="players">
-        <div class="page-heading"><div><p class="eyebrow">PLAYER LAB</p><h1>Player Profile</h1><p>A pro player’s rating, surface splits, recent form and tournament path will live here.</p></div></div>
-        <section class="panel empty-panel"><h2>Choose a player once ratings exist.</h2><p>There are deliberately no fictional player cards masquerading as an analysis database.</p></section>
+        <div class="page-heading"><div><p class="eyebrow">PLAYER LAB</p><h1>Player Profile</h1><p>Recent form, strength of results, surface context and a transparent performance trend.</p></div></div>
+        <div class="filter-row wide"><label>Choose a player <select id="player-select"></select></label><button class="outline-button" id="open-selected-player">Open Player Lab</button></div>
+        <div id="player-content"><section class="panel empty-panel"><h2>Pick a player.</h2><p>Profiles load on demand, so the page stays quick even with more than 1,500 players in the model.</p></section></div>
+      </section>
+
+      <section class="view" id="matchup" data-panel="matchup">
+        <div class="page-heading"><div><p class="eyebrow">MATCHUP LAB</p><h1>Who wins?</h1><p>A model-baseline probability, with head-to-head and surface context shown separately rather than smuggled in as fake certainty.</p></div></div>
+        <div class="matchup-controls"><label>Player A <select id="matchup-a"></select></label><label>Player B <select id="matchup-b"></select></label><label>Format <select id="matchup-format"><option value="3">Best of 3</option><option value="5">Best of 5</option></select></label><button class="accent-button" id="run-matchup">Run matchup</button></div>
+        <div id="matchup-content"><section class="panel empty-panel"><h2>Choose two players.</h2><p>The model will do its little probability goblin routine.</p></section></div>
+      </section>
+
+      <section class="view" id="tournaments" data-panel="tournaments">
+        <div class="page-heading"><div><p class="eyebrow">EVENT INDEX</p><h1>Tournament Centre</h1><p>Every imported professional event, from Slams to Challenger-level draws.</p></div></div>
+        <div class="filter-row"><label>Find an event <input id="event-search" type="search" placeholder="e.g. Roland Garros"></label><label>Event type <select id="event-type-filter"><option value="">All levels</option></select></label></div>
+        <section class="panel ratings-panel"><div class="table-wrap"><table><thead><tr><th>Event</th><th>Level</th><th>Surface</th><th>Dates</th><th>Champion</th><th>Matches</th></tr></thead><tbody id="tournaments-table"><tr><td colspan="6" class="loading-cell">Reading event index…</td></tr></tbody></table></div></section>
+      </section>
+
+      <section class="view" id="draw" data-panel="draw">
+        <div class="page-heading"><div><p class="eyebrow">EVENT BRACKET</p><h1>Knockout Draw</h1><p>Draw rounds are reconstructed from every result stored for the selected event.</p></div></div>
+        <div class="filter-row wide"><label>Choose an event <select id="draw-event-select"></select></label><button class="outline-button" id="load-draw">Load draw</button></div>
+        <div id="draw-content"><section class="panel empty-panel"><h2>Choose an event.</h2><p>Team competitions and round robins are shown honestly as rounds too; brackets do not get to gaslight the format.</p></section></div>
+      </section>
+
+      <section class="view" id="results" data-panel="results">
+        <div class="page-heading"><div><p class="eyebrow">MATCH LEDGER</p><h1>Latest Results</h1><p>Search the latest published part of the ATP-only ledger by player or tournament.</p></div></div>
+        <div class="filter-row"><label>Search <input id="result-search" type="search" placeholder="Player or event"></label><label>Status <select id="result-status"><option value="">All statuses</option><option value="completed">Completed</option><option value="retirement">Retirement</option><option value="walkover">Walkover</option></select></label></div>
+        <section class="panel ratings-panel"><div class="table-wrap"><table><thead><tr><th>Date</th><th>Event</th><th>Round</th><th>Winner</th><th>Score</th><th>Loser</th></tr></thead><tbody id="results-table"><tr><td colspan="6" class="loading-cell">Reading latest results…</td></tr></tbody></table></div></section>
+      </section>
+
+      <section class="view" id="health" data-panel="health">
+        <div class="page-heading"><div><p class="eyebrow">MODEL & IMPORT AUDIT</p><h1>Model Health</h1><p>Transparent fit diagnostics and data-quality checks—because a rating table without a report card is just numerology in a trench coat.</p></div></div>
+        <div id="health-content"><section class="panel loading-panel">Loading diagnostics…</section></div>
       </section>
 
       <section class="view" id="methodology" data-panel="methodology">
-        <div class="page-heading"><div><p class="eyebrow">MODEL DOCUMENTATION</p><h1>Methodology</h1><p>The rating engine will be documented here before it is used to make claims about players.</p></div></div>
-        <section class="panel methodology-list"><h2>Planned foundations</h2><ol><li>Opponent-adjusted match-strength model.</li><li>Recency weighting with reproducible calculation exports.</li><li>Singles-only data scope for the first version.</li><li>Transparent handling of walkovers, retirements and incomplete results.</li><li>Surface and tournament-tier metadata retained for later analysis.</li></ol></section>
+        <div class="page-heading"><div><p class="eyebrow">MODEL DOCUMENTATION</p><h1>Methodology</h1><p>Every rating comes from the published ATP-only ledger and a reproducible scoreline model.</p></div></div>
+        <section class="panel methodology-list"><h2>ATP V1</h2><ol><li>Opponent-adjusted game-score likelihood: <code>p = logistic((θᵢ − θⱼ) / 0.75)</code>.</li><li>Recent results matter more: a 300-day half-life within a rolling three-year window.</li><li>Best-of-five conventional-set games count, but every match is capped at 28 game-equivalents.</li><li>Match tiebreak points are not treated as games; retirements and walkovers remain visible but do not fit ratings.</li><li>Power is shown as <code>1500 + 600θ</code>; the 95% range comes from the centred Laplace uncertainty estimate.</li></ol></section>
       </section>
 
       <section class="view" id="settings" data-panel="settings">
-        <div class="page-heading"><div><p class="eyebrow">PREFERENCES</p><h1>Settings</h1><p>Presentation preferences are saved locally in this browser.</p></div></div>
-        <section class="panel settings-row"><div><strong>Colour theme</strong><p>Keep the default dark broadcast-style theme.</p></div><button class="outline-button" id="theme-toggle">Toggle contrast</button></section>
+        <div class="page-heading"><div><p class="eyebrow">PREFERENCES</p><h1>Settings</h1><p>Visual settings are stored only in this browser. Data refreshes are handled by GitHub Actions.</p></div></div>
+        <section class="panel settings-row"><div><strong>Colour theme</strong><p>Keep the broadcast-style dark layout or enable high contrast.</p></div><button class="outline-button" id="theme-toggle">Toggle contrast</button></section>
       </section>
     </main>
   </div>
