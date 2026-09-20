@@ -1,9 +1,9 @@
 {
-  "checked_at_utc": "2026-09-20T06:44:35.448916+00:00",
+  "checked_at_utc": "2026-09-20T06:46:26.163805+00:00",
   "new_results": true,
-  "new_matches": 32042,
+  "new_matches": 32028,
   "corrected_matches": 0,
-  "matches": 32042,
+  "matches": 32028,
   "players": 1507,
   "events": 1100,
   "coverage_start": "2023-09-20",
@@ -16,7 +16,7 @@
     "Davis Cup": 653,
     "Grand Slam": 2868,
     "Hopman Cup": 7,
-    "Laver Cup": 42,
+    "Laver Cup": 28,
     "United Cup": 75
   },
   "source_files": [

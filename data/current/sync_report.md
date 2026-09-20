@@ -1,11 +1,11 @@
 # ATP Power Ratings sync report
 
-Checked (UTC): 2026-09-20T06:44:35.448916+00:00
+Checked (UTC): 2026-09-20T06:46:26.163805+00:00
 Coverage: 2023-09-20 to 2026-09-19
-Results indexed: 32,042
+Results indexed: 32,028
 Players: 1,507
 Events: 1,100
-New matches: 32,042
+New matches: 32,028
 Corrected matches: 0
 Manual men's-special-event matches: 31
 
@@ -17,7 +17,7 @@ Manual men's-special-event matches: 31
 - Davis Cup: 653
 - Grand Slam: 2,868
 - Hopman Cup: 7
-- Laver Cup: 42
+- Laver Cup: 28
 - United Cup: 75
 
 ## Source files
