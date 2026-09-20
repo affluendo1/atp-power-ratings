@@ -1,0 +1,39 @@
+date,event_id,event_name,event_type,surface,indoor,best_of,round,winner_name,loser_name,score,status,source_url
+2023-07-19,hopman-2023,Hopman Cup,Hopman Cup,Clay,N,3,RR,Leandro Riedi,Holger Rune,6-4 6-3,completed,https://www.itftennis.com/en/news-and-media/articles/schedule-announced-for-2023-hopman-cup/
+2023-07-20,hopman-2023,Hopman Cup,Hopman Cup,Clay,N,3,RR,Richard Gasquet,Holger Rune,6-2 6-3,completed,https://www.itftennis.com/en/news-and-media/articles/schedule-announced-for-2023-hopman-cup/
+2023-07-21,hopman-2023,Hopman Cup,Hopman Cup,Clay,N,3,RR,Leandro Riedi,Richard Gasquet,6-3 3-6 [10-8],completed,https://www.itftennis.com/en/news-and-media/articles/schedule-announced-for-2023-hopman-cup/
+2023-07-20,hopman-2023,Hopman Cup,Hopman Cup,Clay,N,3,RR,Borna Coric,David Goffin,6-3 4-6 [10-4],completed,https://www.itftennis.com/en/news-and-media/articles/schedule-announced-for-2023-hopman-cup/
+2023-07-21,hopman-2023,Hopman Cup,Hopman Cup,Clay,N,3,RR,Carlos Alcaraz,David Goffin,4-6 6-4 [10-5],completed,https://www.itftennis.com/en/news-and-media/articles/schedule-announced-for-2023-hopman-cup/
+2023-07-22,hopman-2023,Hopman Cup,Hopman Cup,Clay,N,3,RR,Borna Coric,Carlos Alcaraz,6-3 6-7(8) [10-6],completed,https://www.itftennis.com/en/news-and-media/articles/schedule-announced-for-2023-hopman-cup/
+2023-07-23,hopman-2023,Hopman Cup,Hopman Cup,Clay,N,3,F,Borna Coric,Leandro Riedi,6-1 6-4,completed,https://www.itftennis.com/en/news-and-media/articles/schedule-announced-for-2023-hopman-cup/
+2023-09-22,laver-2023,Laver Cup,Laver Cup,Hard,Y,3,RR,Ben Shelton,Arthur Fils,7-6(4) 6-1,completed,https://lavercup.com/scores-results-2023
+2023-09-22,laver-2023,Laver Cup,Laver Cup,Hard,Y,3,RR,Francisco Cerundolo,Alejandro Davidovich Fokina,6-3 7-5,completed,https://lavercup.com/scores-results-2023
+2023-09-22,laver-2023,Laver Cup,Laver Cup,Hard,Y,3,RR,Felix Auger-Aliassime,Gael Monfils,6-4 6-3,completed,https://lavercup.com/scores-results-2023
+2023-09-23,laver-2023,Laver Cup,Laver Cup,Hard,Y,3,RR,Taylor Fritz,Andrey Rublev,6-2 7-6(3),completed,https://lavercup.com/scores-results-2023
+2023-09-23,laver-2023,Laver Cup,Laver Cup,Hard,Y,3,RR,Casper Ruud,Tommy Paul,7-6(8) 6-2,completed,https://lavercup.com/scores-results-2023
+2023-09-23,laver-2023,Laver Cup,Laver Cup,Hard,Y,3,RR,Frances Tiafoe,Hubert Hurkacz,7-5 6-3,completed,https://lavercup.com/scores-results-2023
+2024-09-20,laver-2024,Laver Cup,Laver Cup,Hard,Y,3,RR,Francisco Cerundolo,Casper Ruud,6-4 6-4,completed,https://lavercup.com/scores-results-2024
+2024-09-20,laver-2024,Laver Cup,Laver Cup,Hard,Y,3,RR,Stefanos Tsitsipas,Thanasi Kokkinakis,6-1 6-4,completed,https://lavercup.com/scores-results-2024
+2024-09-20,laver-2024,Laver Cup,Laver Cup,Hard,Y,3,RR,Grigor Dimitrov,Alejandro Tabilo,7-6(4) 7-6(2),completed,https://lavercup.com/scores-results-2024
+2024-09-21,laver-2024,Laver Cup,Laver Cup,Hard,Y,3,RR,Frances Tiafoe,Daniil Medvedev,3-6 6-4 [10-5],completed,https://lavercup.com/scores-results-2024
+2024-09-21,laver-2024,Laver Cup,Laver Cup,Hard,Y,3,RR,Carlos Alcaraz,Ben Shelton,6-4 6-4,completed,https://lavercup.com/scores-results-2024
+2024-09-21,laver-2024,Laver Cup,Laver Cup,Hard,Y,3,RR,Taylor Fritz,Alexander Zverev,6-4 7-5,completed,https://lavercup.com/scores-results-2024
+2024-09-22,laver-2024,Laver Cup,Laver Cup,Hard,Y,3,RR,Ben Shelton,Daniil Medvedev,6-7(8) 7-5 [10-7],completed,https://lavercup.com/scores-results-2024
+2024-09-22,laver-2024,Laver Cup,Laver Cup,Hard,Y,3,RR,Alexander Zverev,Frances Tiafoe,6-7(5) 7-5 [10-5],completed,https://lavercup.com/scores-results-2024
+2024-09-22,laver-2024,Laver Cup,Laver Cup,Hard,Y,3,RR,Carlos Alcaraz,Taylor Fritz,6-2 7-5,completed,https://lavercup.com/scores-results-2024
+2025-07-16,hopman-2025,Hopman Cup,Hopman Cup,Hard,N,3,RR,Roberto Bautista Agut,Stefanos Tsitsipas,6-3 7-6(6) [10-8],completed,https://www.itftennis.com/en/news-and-media/articles/italian-city-bari-to-host-2025-hopman-cup/
+2025-07-18,hopman-2025,Hopman Cup,Hopman Cup,Hard,N,3,RR,Felix Auger-Aliassime,Roberto Bautista Agut,6-3 7-6(3),completed,https://www.itftennis.com/en/news-and-media/articles/italian-city-bari-to-host-2025-hopman-cup/
+2025-07-19,hopman-2025,Hopman Cup,Hopman Cup,Hard,N,3,RR,Felix Auger-Aliassime,Stefanos Tsitsipas,7-6(4) 6-3,completed,https://www.itftennis.com/en/news-and-media/articles/italian-city-bari-to-host-2025-hopman-cup/
+2025-07-16,hopman-2025,Hopman Cup,Hopman Cup,Hard,N,3,RR,Flavio Cobolli,Duje Ajdukovic,6-7(1) 6-4 [10-6],completed,https://www.itftennis.com/en/news-and-media/articles/italian-city-bari-to-host-2025-hopman-cup/
+2025-07-17,hopman-2025,Hopman Cup,Hopman Cup,Hard,N,3,RR,Richard Gasquet,Duje Ajdukovic,5-7 6-2 [10-6],completed,https://www.itftennis.com/en/news-and-media/articles/italian-city-bari-to-host-2025-hopman-cup/
+2025-07-18,hopman-2025,Hopman Cup,Hopman Cup,Hard,N,3,RR,Flavio Cobolli,Richard Gasquet,6-2 6-4,completed,https://www.itftennis.com/en/news-and-media/articles/italian-city-bari-to-host-2025-hopman-cup/
+2025-07-20,hopman-2025,Hopman Cup,Hopman Cup,Hard,N,3,F,Felix Auger-Aliassime,Flavio Cobolli,7-6(9) 5-7 [10-8],completed,https://www.itftennis.com/en/news-and-media/articles/italian-city-bari-to-host-2025-hopman-cup/
+2025-09-19,laver-2025,Laver Cup,Laver Cup,Hard,Y,3,RR,Casper Ruud,Reilly Opelka,6-4 7-6(4),completed,https://lavercup.com/scores-results-2025
+2025-09-19,laver-2025,Laver Cup,Laver Cup,Hard,Y,3,RR,Jakub Mensik,Alex Michelsen,6-1 6-7(3) [10-8],completed,https://lavercup.com/scores-results-2025
+2025-09-19,laver-2025,Laver Cup,Laver Cup,Hard,Y,3,RR,Joao Fonseca,Flavio Cobolli,6-4 6-3,completed,https://lavercup.com/scores-results-2025
+2025-09-20,laver-2025,Laver Cup,Laver Cup,Hard,Y,3,RR,Alex de Minaur,Alexander Zverev,6-1 6-4,completed,https://lavercup.com/scores-results-2025
+2025-09-20,laver-2025,Laver Cup,Laver Cup,Hard,Y,3,RR,Francisco Cerundolo,Holger Rune,6-3 7-6(5),completed,https://lavercup.com/scores-results-2025
+2025-09-20,laver-2025,Laver Cup,Laver Cup,Hard,Y,3,RR,Taylor Fritz,Carlos Alcaraz,6-3 6-2,completed,https://lavercup.com/scores-results-2025
+2025-09-21,laver-2025,Laver Cup,Laver Cup,Hard,Y,3,RR,Alex de Minaur,Jakub Mensik,6-3 6-4,completed,https://lavercup.com/scores-results-2025
+2025-09-21,laver-2025,Laver Cup,Laver Cup,Hard,Y,3,RR,Carlos Alcaraz,Francisco Cerundolo,6-2 6-1,completed,https://lavercup.com/scores-results-2025
+2025-09-21,laver-2025,Laver Cup,Laver Cup,Hard,Y,3,RR,Taylor Fritz,Alexander Zverev,6-3 7-6(4),completed,https://lavercup.com/scores-results-2025

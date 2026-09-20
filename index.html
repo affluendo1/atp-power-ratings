@@ -53,20 +53,12 @@
           <article><span>Latest event</span><strong data-stat="event">—</strong></article>
           <article><span>Last update</span><strong data-stat="updated">Not connected</strong></article>
         </section>
-        <section class="panel empty-panel">
-          <div class="empty-icon">⌁</div>
-          <h2>The rankings table is ready for tour data.</h2>
-          <p>This shell expects completed main-draw singles matches, player identities, event metadata, surfaces, rounds and scorelines. No club teams, fixtures or local-section assumptions sneak in through the back door.</p>
-        </section>
+        <section class="panel ratings-panel"><div class="table-wrap"><table><thead><tr><th>Rank</th><th>Player</th><th>Power</th><th>Record</th><th>Matches</th><th>95% range</th></tr></thead><tbody id="rankings-table"><tr><td colspan="6" class="loading-cell">Importing tour data…</td></tr></tbody></table></div></section>
       </section>
 
       <section class="view" id="tournaments" data-panel="tournaments">
         <div class="page-heading"><div><p class="eyebrow">EVENT INDEX</p><h1>Tournaments</h1><p>Each event is a self-contained knockout draw: Grand Slams, Masters, ATP 500s and ATP 250s.</p></div></div>
-        <section class="panel feature-grid">
-          <article><h2>Event record</h2><p>Tour level, venue, country, dates, surface, draw size and champion.</p></article>
-          <article><h2>Draw context</h2><p>Seeds, byes, qualifiers, wildcards and withdrawals are model-ready fields.</p></article>
-          <article><h2>Surface splits</h2><p>Hard, clay, grass and indoor hard are kept as first-class data—not decorative labels.</p></article>
-        </section>
+        <section class="panel ratings-panel"><div class="table-wrap"><table><thead><tr><th>Event</th><th>Level</th><th>Surface</th><th>Dates</th><th>Matches</th></tr></thead><tbody id="tournaments-table"><tr><td colspan="5" class="loading-cell">Importing event index…</td></tr></tbody></table></div></section>
       </section>
 
       <section class="view" id="draw" data-panel="draw">
@@ -76,7 +68,7 @@
 
       <section class="view" id="results" data-panel="results">
         <div class="page-heading"><div><p class="eyebrow">MATCH LEDGER</p><h1>Match Results</h1><p>Completed singles matches will be searchable by event, player, round, surface and season.</p></div></div>
-        <section class="panel empty-panel"><h2>Results are awaiting their source.</h2><p>Retirements, walkovers and scoreless withdrawals will be explicitly represented rather than faked as ordinary scores.</p></section>
+        <section class="panel ratings-panel"><div class="table-wrap"><table><thead><tr><th>Date</th><th>Event</th><th>Round</th><th>Winner</th><th>Score</th><th>Loser</th></tr></thead><tbody id="results-table"><tr><td colspan="6" class="loading-cell">Importing latest results…</td></tr></tbody></table></div></section>
       </section>
 
       <section class="view" id="players" data-panel="players">

@@ -1,0 +1,74 @@
+name: Sync ATP results and ratings
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "22 7 * * *"
+      timezone: "Australia/Melbourne"
+  push:
+    paths:
+      - "sync_atp.py"
+      - "model.py"
+      - "generate_site_data.py"
+      - "send_sync_report.py"
+      - "data/manual/special_events.csv"
+      - "requirements.txt"
+      - ".github/workflows/sync-atp.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atp-results-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install data and model dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run model regression tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Import ATP-only results from every configured level
+        run: python sync_atp.py
+
+      - name: Recalculate ratings and static site data
+        run: python generate_site_data.py
+
+      - name: Publish daily check summary
+        run: cat data/current/sync_report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit refreshed source data, ratings and status
+        shell: bash
+        run: |
+          git config user.name "atp-ratings-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/current data/site data.js
+          if git diff --cached --quiet; then
+            echo "No files changed after this check."
+          else
+            NEW=$(python -c "import json; print(json.load(open('data/current/sync_status.json'))['new_matches'])")
+            FIXED=$(python -c "import json; print(json.load(open('data/current/sync_status.json'))['corrected_matches'])")
+            git commit -m "ATP sync: ${NEW} new, ${FIXED} corrected results"
+            git pull --rebase origin main
+            git push
+          fi
+
+      - name: Email the completed daily report when mail secrets exist
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          SYNC_REPORT_TO: ${{ secrets.SYNC_REPORT_TO }}
+          SYNC_REPORT_FROM: ${{ secrets.SYNC_REPORT_FROM }}
+        run: python send_sync_report.py
