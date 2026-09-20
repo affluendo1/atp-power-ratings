@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d12">
+  <meta name="description" content="Unofficial professional tennis ratings and tournament analytics.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <title>ATP Power Ratings</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#rankings" aria-label="ATP Power Ratings home">
+        <span class="brand-ball" aria-hidden="true"></span>
+        <span><strong>ATP</strong> Power Ratings<small>Professional tennis analytics</small></span>
+      </a>
+      <div class="sync-state" title="A live data provider will be connected in the next stage">
+        <span class="status-dot"></span><span>INFRASTRUCTURE MODE</span>
+      </div>
+    </header>
+
+    <aside class="sidebar" aria-label="Main navigation">
+      <nav class="nav-list">
+        <a class="nav-link active" href="#rankings" data-view="rankings">Rankings</a>
+        <a class="nav-link" href="#tournaments" data-view="tournaments">Tournaments</a>
+        <a class="nav-link" href="#draw" data-view="draw">Knockout Draw</a>
+        <a class="nav-link" href="#results" data-view="results">Match Results</a>
+        <a class="nav-link" href="#players" data-view="players">Player Lab</a>
+        <a class="nav-link" href="#methodology" data-view="methodology">Methodology</a>
+        <a class="nav-link" href="#settings" data-view="settings">Settings</a>
+      </nav>
+      <section class="season-card" aria-label="Season selection">
+        <p class="eyebrow">DATA SCOPE</p>
+        <strong>ATP Tour</strong>
+        <span>Singles · knockout events</span>
+        <span class="muted">No results loaded yet</span>
+      </section>
+    </aside>
+
+    <main id="main" class="main-content">
+      <section class="view is-visible" id="rankings" data-panel="rankings">
+        <div class="page-heading">
+          <div><p class="eyebrow">GLOBAL SINGLES</p><h1>Power Rankings</h1><p>Opponent-adjusted player strength across professional knockout tournaments.</p></div>
+          <button class="outline-button" disabled title="Available once data is connected">Export ratings</button>
+        </div>
+        <section class="stats-grid" aria-label="Rating summary">
+          <article><span>Players tracked</span><strong data-stat="players">—</strong></article>
+          <article><span>Matches indexed</span><strong data-stat="matches">—</strong></article>
+          <article><span>Latest event</span><strong data-stat="event">—</strong></article>
+          <article><span>Last update</span><strong data-stat="updated">Not connected</strong></article>
+        </section>
+        <section class="panel empty-panel">
+          <div class="empty-icon">⌁</div>
+          <h2>The rankings table is ready for tour data.</h2>
+          <p>This shell expects completed main-draw singles matches, player identities, event metadata, surfaces, rounds and scorelines. No club teams, fixtures or local-section assumptions sneak in through the back door.</p>
+        </section>
+      </section>
+
+      <section class="view" id="tournaments" data-panel="tournaments">
+        <div class="page-heading"><div><p class="eyebrow">EVENT INDEX</p><h1>Tournaments</h1><p>Each event is a self-contained knockout draw: Grand Slams, Masters, ATP 500s and ATP 250s.</p></div></div>
+        <section class="panel feature-grid">
+          <article><h2>Event record</h2><p>Tour level, venue, country, dates, surface, draw size and champion.</p></article>
+          <article><h2>Draw context</h2><p>Seeds, byes, qualifiers, wildcards and withdrawals are model-ready fields.</p></article>
+          <article><h2>Surface splits</h2><p>Hard, clay, grass and indoor hard are kept as first-class data—not decorative labels.</p></article>
+        </section>
+      </section>
+
+      <section class="view" id="draw" data-panel="draw">
+        <div class="page-heading"><div><p class="eyebrow">EVENT BRACKET</p><h1>Knockout Draw</h1><p>Selecting an event will render its rounds from first round through the final.</p></div></div>
+        <section class="panel empty-panel"><div class="empty-icon">⌘</div><h2>No tournament selected</h2><p>The upcoming data layer will feed one draw at a time without forcing a round-robin fixture model onto it. Tiny victory for brackets everywhere.</p></section>
+      </section>
+
+      <section class="view" id="results" data-panel="results">
+        <div class="page-heading"><div><p class="eyebrow">MATCH LEDGER</p><h1>Match Results</h1><p>Completed singles matches will be searchable by event, player, round, surface and season.</p></div></div>
+        <section class="panel empty-panel"><h2>Results are awaiting their source.</h2><p>Retirements, walkovers and scoreless withdrawals will be explicitly represented rather than faked as ordinary scores.</p></section>
+      </section>
+
+      <section class="view" id="players" data-panel="players">
+        <div class="page-heading"><div><p class="eyebrow">PLAYER LAB</p><h1>Player Profile</h1><p>A pro player’s rating, surface splits, recent form and tournament path will live here.</p></div></div>
+        <section class="panel empty-panel"><h2>Choose a player once ratings exist.</h2><p>There are deliberately no fictional player cards masquerading as an analysis database.</p></section>
+      </section>
+
+      <section class="view" id="methodology" data-panel="methodology">
+        <div class="page-heading"><div><p class="eyebrow">MODEL DOCUMENTATION</p><h1>Methodology</h1><p>The rating engine will be documented here before it is used to make claims about players.</p></div></div>
+        <section class="panel methodology-list"><h2>Planned foundations</h2><ol><li>Opponent-adjusted match-strength model.</li><li>Recency weighting with reproducible calculation exports.</li><li>Singles-only data scope for the first version.</li><li>Transparent handling of walkovers, retirements and incomplete results.</li><li>Surface and tournament-tier metadata retained for later analysis.</li></ol></section>
+      </section>
+
+      <section class="view" id="settings" data-panel="settings">
+        <div class="page-heading"><div><p class="eyebrow">PREFERENCES</p><h1>Settings</h1><p>Presentation preferences are saved locally in this browser.</p></div></div>
+        <section class="panel settings-row"><div><strong>Colour theme</strong><p>Keep the default dark broadcast-style theme.</p></div><button class="outline-button" id="theme-toggle">Toggle contrast</button></section>
+      </section>
+    </main>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
