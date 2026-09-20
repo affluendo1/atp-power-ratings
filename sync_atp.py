@@ -206,10 +206,19 @@ def deduplicate(rows: pd.DataFrame) -> pd.DataFrame:
     rows = rows[(rows.winner_name != "") & (rows.loser_name != "")].copy()
     priority = {"manual/special_events.csv": 4}
     rows["_priority"] = rows.source_file.map(priority).fillna(1)
+    special_events = {"Laver Cup", "Hopman Cup"}
+    # The ATP feed stores a tournament-week date while the official
+    # supplementary ledger stores the actual match day.  For these two events,
+    # use event season + players + score, so the same real match is merged
+    # rather than displayed twice with two harmlessly different dates.
+    event_identity = [
+        f"special:{event_class}:{str(day)[:4]}" if str(event_class) in special_events else f"event:{event}:{day}"
+        for event_class, event, day in zip(rows.event_type, rows.event_id, rows.date)
+    ]
     rows["match_id"] = [hashlib.sha1(
-        "|".join([str(event), str(day), str(round_name), *sorted([str(winner), str(loser)]), str(score)]).encode("utf-8")
-    ).hexdigest()[:20] for event, day, round_name, winner, loser, score in zip(
-        rows.event_id, rows.date, rows["round"], rows.winner_id, rows.loser_id, rows.score
+        "|".join([identity, str(round_name), *sorted([str(winner), str(loser)]), str(score)]).encode("utf-8")
+    ).hexdigest()[:20] for identity, round_name, winner, loser, score in zip(
+        event_identity, rows["round"], rows.winner_id, rows.loser_id, rows.score
     )]
     rows = rows.sort_values(["match_id", "_priority"], ascending=[True, False], kind="stable").drop_duplicates("match_id", keep="first")
     earliest = (pd.Timestamp.utcnow().normalize() - pd.DateOffset(years=YEARS_BACK)).strftime("%Y-%m-%d")
