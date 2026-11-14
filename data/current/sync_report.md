@@ -1,17 +1,17 @@
 # ATP Power Ratings sync report
 
-Checked (UTC): 2026-11-14T00:55:11.945339+00:00
-Coverage: 2023-11-19 to 2026-11-13
-Results indexed: 32,324
+Checked (UTC): 2026-11-14T23:58:40.284256+00:00
+Coverage: 2023-11-19 to 2026-11-14
+Results indexed: 32,325
 Players: 1,540
 Events: 1,120
-New matches: 2
+New matches: 1
 Corrected matches: 0
 Manual men's-special-event matches: 25
 
 ## Event coverage
 - ATP Finals: 45
-- ATP Tour: 6,472
+- ATP Tour: 6,473
 - ATP Tour Qualifying: 2,570
 - Challenger: 19,554
 - Davis Cup: 706
