@@ -1,19 +1,4 @@
 date,event_id,event_name,event_type,surface,indoor,best_of,round,winner_name,loser_name,winner_id,loser_id,score,status,source_file,source_url,match_id
-2023-11-13,2023-605,Tour Finals,ATP Finals,Hard,I,3,RR,Daniil Medvedev,Alexander Zverev,atp:MM58,atp:Z355,7-6(7) 6-4,completed,2023.csv,https://stats.tennismylife.org/data/2023.csv,130f783602da219eabae
-2023-11-13,2023-605,Tour Finals,ATP Finals,Hard,I,3,RR,Alexander Zverev,Carlos Alcaraz,atp:Z355,atp:A0E2,6-7(3) 6-3 6-4,completed,2023.csv,https://stats.tennismylife.org/data/2023.csv,448d67389abf8e2b87f1
-2023-11-13,2023-605,Tour Finals,ATP Finals,Hard,I,3,RR,Carlos Alcaraz,Andrey Rublev,atp:A0E2,atp:RE44,7-5 6-2,completed,2023.csv,https://stats.tennismylife.org/data/2023.csv,50489dff4831603151c2
-2023-11-13,2023-605,Tour Finals,ATP Finals,Hard,I,3,F,Novak Djokovic,Jannik Sinner,atp:D643,atp:S0AG,6-3 6-3,completed,2023.csv,https://stats.tennismylife.org/data/2023.csv,54b138170a57e1dc4fec
-2023-11-13,2023-605,Tour Finals,ATP Finals,Hard,I,3,RR,Novak Djokovic,Holger Rune,atp:D643,atp:R0DG,7-6(4) 6-7(1) 6-3,completed,2023.csv,https://stats.tennismylife.org/data/2023.csv,54e7ead91701da8bf96c
-2023-11-13,2023-605,Tour Finals,ATP Finals,Hard,I,3,RR,Carlos Alcaraz,Daniil Medvedev,atp:A0E2,atp:MM58,6-4 6-4,completed,2023.csv,https://stats.tennismylife.org/data/2023.csv,56be9667f9d0574c0930
-2023-11-13,2023-605,Tour Finals,ATP Finals,Hard,I,3,RR,Jannik Sinner,Stefanos Tsitsipas,atp:S0AG,atp:TE51,6-4 6-4,completed,2023.csv,https://stats.tennismylife.org/data/2023.csv,587dff8738ab07211e0a
-2023-11-13,2023-605,Tour Finals,ATP Finals,Hard,I,3,RR,Holger Rune,Stefanos Tsitsipas,atp:R0DG,atp:TE51,2-1 RET,retirement,2023.csv,https://stats.tennismylife.org/data/2023.csv,69650b3cf5cd695a502b
-2023-11-13,2023-605,Tour Finals,ATP Finals,Hard,I,3,SF,Novak Djokovic,Carlos Alcaraz,atp:D643,atp:A0E2,6-3 6-2,completed,2023.csv,https://stats.tennismylife.org/data/2023.csv,766d2e697f6be7220368
-2023-11-13,2023-605,Tour Finals,ATP Finals,Hard,I,3,RR,Alexander Zverev,Andrey Rublev,atp:Z355,atp:RE44,6-4 6-4,completed,2023.csv,https://stats.tennismylife.org/data/2023.csv,8acddaccd98066f3f018
-2023-11-13,2023-605,Tour Finals,ATP Finals,Hard,I,3,SF,Jannik Sinner,Daniil Medvedev,atp:S0AG,atp:MM58,6-3 6-7(4) 6-1,completed,2023.csv,https://stats.tennismylife.org/data/2023.csv,a618928cf1488e6902f5
-2023-11-13,2023-605,Tour Finals,ATP Finals,Hard,I,3,RR,Jannik Sinner,Holger Rune,atp:S0AG,atp:R0DG,6-2 5-7 6-4,completed,2023.csv,https://stats.tennismylife.org/data/2023.csv,b4602b0b0b6aca2dfff3
-2023-11-13,2023-605,Tour Finals,ATP Finals,Hard,I,3,RR,Daniil Medvedev,Andrey Rublev,atp:MM58,atp:RE44,6-4 6-2,completed,2023.csv,https://stats.tennismylife.org/data/2023.csv,d3b5d8c83cb0b4351675
-2023-11-13,2023-605,Tour Finals,ATP Finals,Hard,I,3,RR,Novak Djokovic,Hubert Hurkacz,atp:D643,atp:HB71,7-6(1) 4-6 6-1,completed,2023.csv,https://stats.tennismylife.org/data/2023.csv,f4179ef5caa10831d8b3
-2023-11-13,2023-605,Tour Finals,ATP Finals,Hard,I,3,RR,Jannik Sinner,Novak Djokovic,atp:S0AG,atp:D643,7-5 6-7(5) 7-6(2),completed,2023.csv,https://stats.tennismylife.org/data/2023.csv,f5c11a21aacced80eccb
 2023-11-19,2023-637,Champaign,Challenger,Hard,,3,R32,Titouan Droguet,Viktor Durasovic,atp:D0DW,atp:DC76,6-2 6-3,completed,2023_challenger.csv,https://stats.tennismylife.org/data/2023_challenger.csv,05872739eacb4f71fd65
 2023-11-19,2023-637,Champaign,Challenger,Hard,,3,QF,Alex Michelsen,Martin Damm,atp:M0QI,atp:D0DT,6-1 1-6 6-4,completed,2023_challenger.csv,https://stats.tennismylife.org/data/2023_challenger.csv,12dff88f64c7570dffe2
 2023-11-19,2023-637,Champaign,Challenger,Hard,,3,R32,Beibit Zhukayev,Enrico Dalla Valle,atp:Z09Z,atp:DG80,6-1 6-1,completed,2023_challenger.csv,https://stats.tennismylife.org/data/2023_challenger.csv,22575a551c5aeee2c5af
@@ -32336,3 +32321,5 @@ date,event_id,event_name,event_type,surface,indoor,best_of,round,winner_name,los
 2026-11-12,2026-429,Stockholm,ATP Tour,Hard,I,3,QF,Lorenzo Musetti,Ugo Humbert,atp:M0EJ,atp:HH26,7-6(5) 3-6 6-4,completed,ongoing_tourneys.csv,https://stats.tennismylife.org/data/ongoing_tourneys.csv,28fe3f7dfd3cc8c8d21a
 2026-11-12,2026-429,Stockholm,ATP Tour,Hard,I,3,QF,Taylor Fritz,Holger Rune,atp:FB98,atp:R0DG,W/O,walkover,ongoing_tourneys.csv,https://stats.tennismylife.org/data/ongoing_tourneys.csv,34690d308d76b0367306
 2026-11-12,2026-429,Stockholm,ATP Tour,Hard,I,3,QF,Thiago Agustin Tirante,Alexander Shevchenko,atp:T0A1,atp:S0H2,7-6(5) 6-7(5) 6-3,completed,ongoing_tourneys.csv,https://stats.tennismylife.org/data/ongoing_tourneys.csv,7ce2d62a48c5c361c0cf
+2026-11-13,2026-429,Stockholm,ATP Tour,Hard,I,3,SF,Thiago Agustin Tirante,Alejandro Tabilo,atp:T0A1,atp:TE30,7-5 7-6(1),completed,ongoing_tourneys.csv,https://stats.tennismylife.org/data/ongoing_tourneys.csv,8b317407cdc0a6ab6dcc
+2026-11-13,2026-429,Stockholm,ATP Tour,Hard,I,3,SF,Taylor Fritz,Lorenzo Musetti,atp:FB98,atp:M0EJ,6-4 6-2,completed,ongoing_tourneys.csv,https://stats.tennismylife.org/data/ongoing_tourneys.csv,cd571ac97ec251e0cca5
