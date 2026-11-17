@@ -32541,3 +32541,5 @@ date,event_id,event_name,event_type,surface,indoor,best_of,round,winner_name,los
 2026-11-14,2026-429,Stockholm,ATP Tour,Hard,I,3,F,Taylor Fritz,Thiago Agustin Tirante,atp:FB98,atp:T0A1,6-2 4-6 7-6(3),completed,2026.csv,https://stats.tennismylife.org/data/2026.csv,79dc5353937d7877bc59
 2026-11-15,2026-605,ATP Finals,ATP Finals,Hard,I,3,RR,Alexander Zverev,Rafael Jodar,atp:Z355,atp:J0DZ,6-4 6-4,completed,ongoing_tourneys.csv,https://stats.tennismylife.org/data/ongoing_tourneys.csv,59026a814a8598c68b74
 2026-11-15,2026-605,ATP Finals,ATP Finals,Hard,I,3,RR,Ben Shelton,Arthur Fils,atp:S0S1,atp:F0F1,6-2 3-6 6-3,completed,ongoing_tourneys.csv,https://stats.tennismylife.org/data/ongoing_tourneys.csv,5a2c45778b423bb51052
+2026-11-16,2026-605,ATP Finals,ATP Finals,Hard,I,3,RR,Carlos Alcaraz,Frances Tiafoe,atp:A0E2,atp:TD51,6-2 6-2,completed,ongoing_tourneys.csv,https://stats.tennismylife.org/data/ongoing_tourneys.csv,042b667e6e01548ec7ec
+2026-11-16,2026-605,ATP Finals,ATP Finals,Hard,I,3,RR,Daniil Medvedev,Flavio Cobolli,atp:MM58,atp:C0E9,7-6(4) 6-3,completed,ongoing_tourneys.csv,https://stats.tennismylife.org/data/ongoing_tourneys.csv,d20c6814c707777d2180
