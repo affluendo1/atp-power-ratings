@@ -1,7 +1,7 @@
 # ATP Power Ratings sync report
 
-Checked (UTC): 2026-11-25T03:35:16.042682+00:00
-Coverage: 2023-11-25 to 2026-11-24
+Checked (UTC): 2026-11-26T02:54:38.947888+00:00
+Coverage: 2023-11-26 to 2026-11-25
 Results indexed: 32,609
 Players: 1,546
 Events: 1,126
